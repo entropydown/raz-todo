@@ -1,0 +1,23 @@
+{
+  "name": "raz-todo",
+  "scripts": {
+  },
+  "env": {
+    "CLOUDAMQP_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "cloudamqp"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
