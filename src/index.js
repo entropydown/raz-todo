@@ -55,8 +55,9 @@ io.on('connection', function(socket) {
 });
 
 let currentApp = app;
+const getEnv = c => process.env[c];
 
-server.listen(process.env.PORT || 3000, error => {
+server.listen(getEnv('PORT') || 3000, error => {
   if (error) {
     console.log(error);
   }
